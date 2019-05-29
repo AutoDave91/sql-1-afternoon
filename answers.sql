@@ -13,7 +13,7 @@ VALUES ('David Newman', 27, 173, 'McKinney', 'Black'),
 ('Kevin Pessetto', 31, 185, 'Addison', 'Green'),
 ('Jamison Jensen', 19, 172, 'Richardson', 'Red'),
 ('Rachel Meyerchick', 25, 180, 'Plano', 'Hot Pink'),
-('Harry Heckmann', 35, 172, 'Denton', 'Orange')
+('Harry Heckmann', 25, 172, 'Denton', 'Orange')
 
 3. SELECT * FROM person
 ORDER BY height DESC
@@ -74,4 +74,23 @@ VALUES ('Apple', 4.99, 12),
 
 6. SELECT SUM(product_price *quantity) FROM orders
 WHERE person_id = 1
+
+--Table artist
+1. INSERT INTO artist (name)
+VALUES ('DC Talk'), ('Pentatonix'), ('Carrie Underwood')
+
+2. SELECT * FROM artist
+ORDER BY name DESC
+LIMIT 10
+
+3. SELECT * FROM artist
+ORDER BY name ASC
+LIMIT 5
+
+4. SELECT * FROM artist
+WHERE name ILIKE 'Black%'
+
+5. SELECT * FROM artist
+WHERE name ILIKE '%Black%'
+
 
