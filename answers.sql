@@ -52,18 +52,26 @@ WHERE favorite_color IN ('Orange', 'Green', 'Blue')
 WHERE favorite_color IN ('Yellow', 'Purple')
 
 --## Table - orders
-1. Create a table called orders that records: person_id, product_name, product_price, quantity.
+1. CREATE TABLE orders (
+    person_id SERIAL,
+    product_name VARCHAR(100),
+    product_price NUMERIC,
+    quantity INT
+)
 
-2. Add 5 orders to the orders table.
+2. INSERT INTO orders (product_name, product_price, quantity)
+VALUES ('Apple', 4.99, 12),
+('Oranges', 3.85, 6),
+('Pie', 3.14, 1),
+('Bears', 358.8, 2),
+('Tigers', 385.5, 2)
 
-    * Make orders for at least two different people.
-    
-    * person_id should be different for different people.
-    
-3. Select all the records from the orders table.
+3. SELECT * FROM orders
 
-4. Calculate the total number of products ordered.
+4. SELECT SUM(quantity) FROM orders
 
-5. Calculate the total order price.
+5. SELECT SUM(product_price * quantity) FROM orders
 
-6. Calculate the total order price by a single person_id.
+6. SELECT SUM(product_price *quantity) FROM orders
+WHERE person_id = 1
+
